@@ -2,11 +2,11 @@ import * as React from 'react';
 import { Button  } from 'react-bootstrap';
 import './App.css';
 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+import { userService } from '../../Models/UserService';
 
 interface WellcomeState {
   name: string;
-  age: number;
 }
 
 interface WellcomeProps {
@@ -27,8 +27,11 @@ class Wellcome extends React.Component<WellcomeProps, WellcomeState> {
     this.setState( {name: data} );
   }
 
+  componentWillUnmount() {
+    userService.setName(this.state.name);
+  }
+
   render() {
-    
     return (
       <div className="App">
         <div className="App-header">

@@ -1,7 +1,11 @@
 import * as React from 'react';
 import './App.css';
 
-class App extends React.Component {
+export interface AppProps {
+
+}
+
+export default class App extends React.Component {
   render() {
     return (
       <div className="App">
@@ -10,5 +14,3 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;

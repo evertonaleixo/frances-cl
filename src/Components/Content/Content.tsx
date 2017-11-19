@@ -1,8 +1,9 @@
 import * as React from 'react';
 import './Content.css';
+import { userService } from '../../Models/UserService';
 
 interface ContentProps {
-  someDefaultValue: string;
+
 }
 
 interface ContentState {
@@ -10,18 +11,20 @@ interface ContentState {
 }
 
 class Content extends React.Component<ContentProps, ContentState> {
-  state: ContentState;
-
   constructor(props: ContentProps) {
     super(props);
-    this.state = {
-      name: ''
-    };
+    this.state = {name: ''};
   }
+
+  componentDidMount() {
+    const name = userService.name;
+    this.setState({ name });
+  }
+
   render() {
     return (
       <div >
-          AKIII {this.state}...
+          AKIII {this.state.name}...
       </div>
     );
   }
