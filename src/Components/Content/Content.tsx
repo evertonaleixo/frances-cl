@@ -24,8 +24,8 @@ class Content extends React.Component<ContentProps, ContentState> {
 
   render() {
     return (
-      <div className="container">
-          <div className="row my-header">
+      <div className="container-fluid">
+          <div className="row-fluid my-header">
             <PageHeader>{this.state.name}, Bienvenue au cours de français de niveau 1.</PageHeader>
           </div>
 
