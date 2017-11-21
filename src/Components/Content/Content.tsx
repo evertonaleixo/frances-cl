@@ -25,11 +25,11 @@ class Content extends React.Component<ContentProps, ContentState> {
   render() {
     return (
       <div className="container-fluid">
-          <div className="row-fluid my-header">
+          <div className="row my-header">
             <PageHeader>{this.state.name}, Bienvenue au cours de français de niveau 1.</PageHeader>
           </div>
 
-          <div className="row my-body">
+          <div className="row-fluid my-body">
             <Tab.Container defaultActiveKey="un">
               <Row className="clearfix">
                 <Col sm={2}>
